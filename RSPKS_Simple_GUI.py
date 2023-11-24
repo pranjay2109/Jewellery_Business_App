@@ -399,9 +399,10 @@ def toplevel_loan():
 
 #Function to display Transaction Report
 def display_transactions():
-    df = pd.read_csv("C:\\Users\\Pranjay Gupta\\Desktop\\Python_projects\\RSPKS\\TransactionReport.csv")
+    path = os.getcwd()
+    df = pd.read_csv(path+"\\TransactionReport.csv")
     df.to_excel("TransactionReport.xlsx", sheet_name="Transaction Report", index=False)
-    os.startfile("C:\\Users\\Pranjay Gupta\\Desktop\\Python_projects\\RSPKS\\TransactionReport.xlsx")
+    os.startfile(path+"\\TransactionReport.xlsx")
 
 #Start-up Window
 label = Label(root, text="Welcome to RSPK Jewellers")
